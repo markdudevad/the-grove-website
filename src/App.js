@@ -4,6 +4,9 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 
 import Main from "./Main";
 
+// Load Roboto typeface
+// require("typeface-roboto");
+
 class App extends React.Component {
   render() {
     return (
