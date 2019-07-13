@@ -1,11 +1,12 @@
 import React from "react";
-import { Typography, AppBar, Toolbar, IconButton } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
 
 import LeftMenu from "./components/LeftMenu";
+import TopToolbar from "./components/TopToolbar";
 
-const styles = theme => ({});
+const styles = theme => ({
+  root: {}
+});
 
 class Main extends React.Component {
   state = {
@@ -31,18 +32,7 @@ class Main extends React.Component {
           handleDrawerClose={this.handleDrawerClose}
           handleListItemClick={this.handleListItemClick}
         />
-        <AppBar color="primary" position="sticky">
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              size="medium"
-              onClick={this.handleMenuClick}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h5">Title Bar</Typography>
-          </Toolbar>
-        </AppBar>
+        <TopToolbar handleMenuClick={this.handleMenuClick} />
       </div>
     );
   }
