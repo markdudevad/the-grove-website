@@ -9,7 +9,14 @@ import {
   ListItem,
   ListItemText
 } from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
+
+const styles = theme => ({
+  wideMenu: {
+    width: 250
+  }
+});
 
 class Main extends React.Component {
   state = {
@@ -27,6 +34,7 @@ class Main extends React.Component {
     console.log("you clicked me! event: ", event.target.firstChild);
   };
   render() {
+    const { classes } = this.props;
     return (
       <div>
         <Drawer
@@ -34,7 +42,7 @@ class Main extends React.Component {
           open={this.state.menu.open}
           onClick={this.handleDrawerClose}
         >
-          <List>
+          <List className={classes.wideMenu}>
             <ListItem onClick={this.handleListItemClick}>
               <ListItemText>Item 1</ListItemText>
             </ListItem>
@@ -63,4 +71,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default withStyles(styles)(Main);
