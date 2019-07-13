@@ -1,22 +1,11 @@
 import React from "react";
-import {
-  Typography,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText
-} from "@material-ui/core";
+import { Typography, AppBar, Toolbar, IconButton } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 
-const styles = theme => ({
-  wideMenu: {
-    width: 250
-  }
-});
+import LeftMenu from "./components/LeftMenu";
+
+const styles = theme => ({});
 
 class Main extends React.Component {
   state = {
@@ -30,30 +19,18 @@ class Main extends React.Component {
   handleDrawerClose = () => {
     this.setState({ menu: { open: false } });
   };
-  handleListItemClick = event => {
-    console.log("you clicked me! event: ", event.target.firstChild);
+  handleListItemClick = item => {
+    console.log("you clicked me! item: ", item);
   };
   render() {
     const { classes } = this.props;
     return (
       <div>
-        <Drawer
-          anchor="left"
-          open={this.state.menu.open}
-          onClick={this.handleDrawerClose}
-        >
-          <List className={classes.wideMenu}>
-            <ListItem onClick={this.handleListItemClick}>
-              <ListItemText>Item 1</ListItemText>
-            </ListItem>
-            <ListItem onClick={this.handleListItemClick}>
-              <ListItemText>Item 2</ListItemText>
-            </ListItem>
-            <ListItem onClick={this.handleListItemClick}>
-              <ListItemText>Item 3</ListItemText>
-            </ListItem>
-          </List>
-        </Drawer>
+        <LeftMenu
+          menu={this.state.menu}
+          handleDrawerClose={this.handleDrawerClose}
+          handleListItemClick={this.handleListItemClick}
+        />
         <AppBar color="primary" position="sticky">
           <Toolbar>
             <IconButton
@@ -63,7 +40,7 @@ class Main extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h5">The Grove</Typography>
+            <Typography variant="h5">Title Bar</Typography>
           </Toolbar>
         </AppBar>
       </div>
