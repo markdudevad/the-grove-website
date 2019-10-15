@@ -4,8 +4,21 @@ import { withStyles } from "@material-ui/core/styles";
 import LeftMenu from "./components/LeftMenu";
 import TopToolbar from "./components/TopToolbar";
 
+/*
+
+TO-DO
+  Breakpoints for picture size
+    Global breakpoints?
+  Facebook icon / link
+
+*/
+
 const styles = theme => ({
-  root: {}
+  root: {},
+  logo: {
+    width: 360,
+    hieght: 240
+  }
 });
 
 class Main extends React.Component {
@@ -32,6 +45,9 @@ class Main extends React.Component {
           handleDrawerClose={this.handleDrawerClose}
           handleListItemClick={this.handleListItemClick}
         />
+        <div align="center">
+          <img src={require("./logo.png")} className={classes.logo} />
+        </div>
         <TopToolbar handleMenuClick={this.handleMenuClick} />
       </div>
     );

@@ -11,15 +11,18 @@ const styles = theme => ({
 
 class TopToolbar extends React.Component {
   render() {
+    const { classes } = this.props;
     const { handleMenuClick } = this.props;
     return (
       <div>
         <AppBar color="primary" position="sticky">
           <Toolbar>
-            <IconButton color="inherit" size="medium" onClick={handleMenuClick}>
+            {/* <IconButton color="inherit" size="medium" onClick={handleMenuClick}>
               <MenuIcon />
-            </IconButton>
-            <Typography variant="h5">Title Bar</Typography>
+            </IconButton> */}
+            <Typography variant="subtitle1" color="inherit">
+              Like us on Facebook
+            </Typography>
           </Toolbar>
         </AppBar>
       </div>
