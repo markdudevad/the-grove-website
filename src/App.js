@@ -15,6 +15,15 @@ const theme = createMuiTheme({
     primary: lightGreen,
     background: {
       default: "rgb(17,63,0)"
+    },
+    text: {
+      primary: green[50],
+      secondary: "black"
+    }
+  },
+  typography: {
+    button: {
+      textTransform: "none"
     }
   }
 });
