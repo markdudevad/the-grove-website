@@ -16,8 +16,8 @@ TO-DO
 const styles = theme => ({
   root: {},
   logo: {
-    width: 360,
-    hieght: 240
+    width: "100%",
+    hieght: "auto"
   }
 });
 
