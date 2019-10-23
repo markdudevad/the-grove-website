@@ -57,7 +57,8 @@ class MainContent extends React.Component {
               </CardContent>
               <CardContent>
                 <Typography variant="subtitle1">
-                  Wed-Fri 2 PM - 6 PM <br />
+                  Wed-Fri 2 PM - 6 PM (bagged pecans only)
+                  <br />
                   Saturday 10 AM - 4 PM
                 </Typography>
               </CardContent>

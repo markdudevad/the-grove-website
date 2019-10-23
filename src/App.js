@@ -9,9 +9,14 @@ import Main from "./Main";
 
 /*=====TO-DO=====
 
+Logo
+  crop out logo phone number
+  crop left and right to fill screen
 Facebook icon vertical center
-Update material ui
-crop out logo phone number
+Update npm material ui
+Price List
+  Weekdays - bagged pecans only
+  Saturday - u pick pecans
 
 =====END TO-DO=====*/
 
