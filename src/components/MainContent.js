@@ -15,10 +15,7 @@ import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
   card: {
-    backgroundColor: theme.palette.secondary.dark
-  },
-  cardHeader: {
-    backgroundColor: theme.palette.secondary.main
+    backgroundColor: theme.palette.background.default
   }
 });
 
@@ -29,7 +26,7 @@ class MainContent extends React.Component {
       <div>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Card className={classes.card}>
+            <Card className={classes.card} align="center">
               <CardHeader
                 title="Event Venue & Pecan Grove"
                 className={classes.cardHeader}
@@ -47,7 +44,7 @@ class MainContent extends React.Component {
             </Card>
           </Grid>
           <Grid item xs={12}>
-            <Card className={classes.card}>
+            <Card className={classes.card} align="center">
               <CardHeader
                 title="U-Pick Pecans"
                 className={classes.cardHeader}
@@ -67,16 +64,17 @@ class MainContent extends React.Component {
             </Card>
           </Grid>
           <Grid item xs={12}>
-            <Card className={classes.card}>
+            <Card className={classes.card} align="center">
               <CardHeader
                 title="Book us for your next event"
                 className={classes.cardHeader}
+                align="center"
               ></CardHeader>
               <CardContent>
                 <Typography variant="subtitle1">
                   The Grove is available for outdoor events placed in our
-                  beautiful [26] acre pecan grove. We host events from time to
-                  time as well, check our Facebook page for updates!
+                  beautiful 2 acre pecan grove. We host events from time to time
+                  as well, check our Facebook page for updates!
                 </Typography>
               </CardContent>
             </Card>

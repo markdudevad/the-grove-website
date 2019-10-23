@@ -25,7 +25,7 @@ const styles = theme => ({
   }
 });
 
-class TopToolbar extends React.Component {
+class NavToolbar extends React.Component {
   render() {
     const { classes } = this.props;
     const { handleMenuClick } = this.props;
@@ -56,4 +56,4 @@ class TopToolbar extends React.Component {
   }
 }
 
-export default withStyles(styles)(TopToolbar);
+export default withStyles(styles)(NavToolbar);

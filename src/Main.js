@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 
 import LeftMenu from "./components/LeftMenu";
-import TopToolbar from "./components/TopToolbar";
+import NavToolbar from "./components/NavToolbar";
 import MainContent from "./components/MainContent";
 
 const styles = theme => ({
@@ -40,8 +40,8 @@ class Main extends React.Component {
         <div align="center">
           <img src={require("./logo.png")} className={classes.logo} />
         </div>
-        <TopToolbar handleMenuClick={this.handleMenuClick} />
         <MainContent />
+        <NavToolbar handleMenuClick={this.handleMenuClick} />
       </div>
     );
   }
