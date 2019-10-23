@@ -8,11 +8,15 @@ import {
   Button
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
+import { green } from "@material-ui/core/colors";
 import MenuIcon from "@material-ui/icons/Menu";
 import { FaFacebookSquare } from "react-icons/fa";
 import { IconContext } from "react-icons";
 
 const styles = theme => ({
+  appbar: {
+    marginBottom: 15
+  },
   wideMenu: {
     width: 150
   },
@@ -27,7 +31,7 @@ class TopToolbar extends React.Component {
     const { handleMenuClick } = this.props;
     return (
       <div>
-        <AppBar color="primary" position="sticky">
+        <AppBar color="primary" position="sticky" className={classes.appbar}>
           <Toolbar>
             {/* <IconButton color="inherit" size="medium" onClick={handleMenuClick}>
               <MenuIcon />
@@ -36,9 +40,7 @@ class TopToolbar extends React.Component {
               variant="text"
               href="https://www.facebook.com/TheGroveLeesvilleSC/?eid=ARCmbwfc4z7Aau6Gkepxkzsn3NDd99sDtV9cZWskgLAZwQqSVxhKBUnQU6Jva8lxF7bTl9NnRb_qePpf"
             >
-              <IconContext.Provider
-                value={{ color: "rgb(66,103,178)", size: 25 }}
-              >
+              <IconContext.Provider value={{ color: green[50], size: 25 }}>
                 <div className={classes.facebookIcon}>
                   <FaFacebookSquare />
                 </div>

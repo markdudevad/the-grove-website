@@ -7,12 +7,18 @@ import { lightGreen, green } from "@material-ui/core/colors";
 
 import Main from "./Main";
 
-// Load Roboto typeface
-// require("typeface-roboto");
+/*=====TO-DO=====
+
+Facebook icon vertical center
+Update material ui
+crop out logo phone number
+
+=====END TO-DO=====*/
 
 const theme = createMuiTheme({
   palette: {
     primary: lightGreen,
+    secondary: green,
     background: {
       default: "rgb(17,63,0)"
     },

@@ -3,15 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 
 import LeftMenu from "./components/LeftMenu";
 import TopToolbar from "./components/TopToolbar";
-
-/*
-
-TO-DO
-  Breakpoints for picture size
-    Global breakpoints?
-  Facebook icon / link
-
-*/
+import MainContent from "./components/MainContent";
 
 const styles = theme => ({
   root: {},
@@ -49,6 +41,7 @@ class Main extends React.Component {
           <img src={require("./logo.png")} className={classes.logo} />
         </div>
         <TopToolbar handleMenuClick={this.handleMenuClick} />
+        <MainContent />
       </div>
     );
   }
