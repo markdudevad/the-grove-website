@@ -1,15 +1,8 @@
 import React from "react";
-import {
-  Typography,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Link,
-  Button
-} from "@material-ui/core";
+import { Typography, AppBar, Toolbar, Button } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
-import MenuIcon from "@material-ui/icons/Menu";
+// import MenuIcon from "@material-ui/icons/Menu";
 import { FaFacebookSquare } from "react-icons/fa";
 import { IconContext } from "react-icons";
 
@@ -28,7 +21,7 @@ const styles = theme => ({
 class NavToolbar extends React.Component {
   render() {
     const { classes } = this.props;
-    const { handleMenuClick } = this.props;
+    // const { handleMenuClick } = this.props;
     return (
       <div>
         <AppBar color="primary" position="sticky" className={classes.appbar}>

@@ -9,7 +9,8 @@ const styles = theme => ({
   root: {},
   logo: {
     width: "100%",
-    hieght: "auto"
+    hieght: "auto",
+    marginTop: 10
   }
 });
 
@@ -38,7 +39,11 @@ class Main extends React.Component {
           handleListItemClick={this.handleListItemClick}
         />
         <div align="center">
-          <img src={require("./logo.png")} className={classes.logo} />
+          <img
+            src={require("./logo.png")}
+            alt="The Grove logo"
+            className={classes.logo}
+          />
         </div>
         <MainContent />
         <NavToolbar handleMenuClick={this.handleMenuClick} />
